@@ -18,6 +18,7 @@ namespace Editor
             buildPlayerOptions.locationPathName = "androidBuild";
             buildPlayerOptions.target = BuildTarget.Android;
             buildPlayerOptions.options = BuildOptions.None;
+            PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, "com.test");
 
             BuildReport report = BuildPipeline.BuildPlayer(buildPlayerOptions);
             BuildSummary summary = report.summary;
